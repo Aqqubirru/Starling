@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Kontak kami</title>
+  <style>
+    /* CSS styles */
+    :root {
+        --white : #fff
+        --black : #000
+        --green : #a6db88
+    }
+
+    body{
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow-x: hidden;
+      background-image: url(https://th.bing.com/th/id/OIP.iQ0dNDFt_uRGdY2xIsEJ_gHaEL?w=308&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7);
+    }
+    nav {
+        background: rgb( 255, 255, 255, 0.7);
+      background-color: #f5f5f5;
+      color: #fff;
+      padding: 0px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      left: 1rem;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+      text-decoration: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #0c0a0a;
+    }
+    nav h1 {
+        color: #0c0a0a;
+        margin-left: 5px;
+    }
+    nav h1 span {
+        color: #1d6833;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Toko <span>Starling</span></h1>
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'menu' %}">Menu</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+    </ul>
+  </nav>
+  <script>
+    // Optional JavaScript

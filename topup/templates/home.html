@@ -1,0 +1,358 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starling Home Page</title>
+  <style>
+    /* CSS */
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      background-size: cover;
+      overflow-x: hidden;
+      background: linear-gradient(to bottom, #ecf2ea, #81e76b);
+      background-image: url(https://media.informabtl.com/wp-content/uploads/2014/11/india-starbucks_.jpg);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: 10px auto;
+    }
+
+    header .left-side a img {
+      width: 80px;
+    }
+
+    header .right-side .nav-link-wrapper a {
+      padding: 10px;
+      margin: 10px;
+      text-decoration: none;
+      color: rgb(241, 240, 240);
+    }
+
+    .container {
+      max-width: 80%;
+      margin: 50px auto;
+      display: flex;
+    }
+
+    .container .left-side {
+      text-align: left;
+      flex: 1;
+    }
+
+    .container .left-side h1 {
+      font-size: 60px;
+      letter-spacing: 2px;
+    }
+
+    .container .left-side h1 .green {
+      color: green;
+      font-family: 'Viga', serif;
+    }
+
+    .container .left-side p {
+      font-size: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .container .left-side a {
+      display: inline-block;
+      background: green;
+      padding: 12px 18px 12px 18px;
+      text-decoration: none;
+      border-radius: 25px;
+      color: white;
+      margin-top: 15px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .container .right-side {
+      flex: 1;
+      text-align: center;
+    }
+
+    .container .right-side img {
+      width: 330px;
+      margin-left: 150px;
+      margin-top: -30px;
+    }
+
+    .container .right-side .box {
+      display: grid;
+      position: absolute;
+      bottom: 40%;
+      right: 1%;
+    }
+
+    .container .right-side .box img {
+      width: 25px;
+      margin: 10px;
+    }
+
+    .container .right-side .box img.facebook {
+      width: 18.5px;
+    }
+
+    .thumb {
+      position: absolute;
+      bottom: 0%;
+      left: 40%;
+    }
+
+    .thumb a:hover {
+      margin-top: -15px;
+      transition: 0.2s;
+    }
+
+    .thumb img {
+      width: 54px;
+      margin: 20px;
+    }
+
+    @media only screen and (max-width: 650px) {
+      header {
+        display: block;
+      }
+
+      header .left-side a img {
+        width: 80px;
+        margin: auto;
+        display: block;
+      }
+
+      header .right-side {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+      }
+
+      header .right-side .nav-link-wrapper a {
+        padding: 10px;
+        margin: 10px;
+        text-decoration: none;
+        color: rgb(248, 246, 246);
+        margin: 0 10px;
+        padding: 5px 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+
+      .nav-link-wrapper a:hover {
+        background-color: lightgrey;
+      }
+
+      .container {
+        max-width: 80%;
+        margin: 50px auto;
+      }
+
+      .container .left-side {
+        text-align: center;
+      }
+
+      .container .left-side h1 {
+        font-size: 50px;
+        letter-spacing: 2px;
+      }
+
+      .container .left-side h1 .green {
+        color: green;
+        font-family: 'Viga', serif;
+      }
+
+      .container .left-side p {
+        font-size: 18px;
+        letter-spacing: 0.5px;
+      }
+
+      .container .left-side a {
+        display: inline-block;
+        background: rgb(81, 220, 81);
+        padding: 12px 18px 12px 18px;
+        text-decoration: none;
+        border-radius: 25px;
+        color: white;
+        margin-top: 15px;
+        font-size: 16.2px;
+        font-weight: bold;
+      }
+    }
+
+    @media only screen and (max-width: 404px) {
+      header {
+        display: block;
+      }
+
+      header .left-side a img {
+        width: 80px;
+        margin: auto;
+        display: block;
+      }
+
+      header .right-side {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+      }
+
+      header .right-side .nav-link-wrapper a {
+        padding: 5px;
+        margin: 5px;
+        text-decoration: none;
+        color: rgb(12, 10, 10);
+        align-items: center;
+      }
+
+      .container .right-side img {
+        width: 330px;
+        margin-top: -30px;
+      }
+
+      .container .right-side img {
+        max-width: 50%;
+      }
+
+      .container .right-side .box {
+        display: none;
+        position: absolute;
+        bottom: 250px;
+        right: 25px;
+      }
+
+      .container .right-side .box img {
+        width: 25px;
+        margin: 10px;
+      }
+
+      .container .right-side .box img.facebook {
+        width: 18.5px;
+      }
+
+      .thumb {
+        display: flex;
+        margin-top: -30px;
+        justify-content: center;
+      }
+
+      .thumb a:hover {
+        margin-top: -15px;
+        transition: 0.2s;
+      }
+
+      .thumb img {
+        width: 45px;
+        margin: 20px;
+      }
+    }
+
+    .container .left-side p {
+      color: #000000;
+    }
+
+    .container .left-side span {
+      color: rgb(96, 77, 40);
+      text-shadow: #000000;
+    }
+
+    .container .left-side .span1 {
+      color : #5de63b;
+    }
+
+    /* container latar belakang */
+  .containers1 {
+    position: relative; 
+    width: 100%;
+    height: 400px; 
+    background-image: url('gambar-latar-belakang.jpg'); 
+    background-size: cover; 
+    color: white; 
+  }
+
+    /* overlay putih */
+    .overlays1 {
+  position: absolute;
+  top: -25rem;
+  left: 6rem; 
+  width: 500px;
+  height: 380px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: -1;
+  left: 6.5rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  outline: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.right-side .nav-link-wrapper a {
+  display: inline;
+}
+  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="left-side">
+    <a href="#"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
+  </div>
+  <div class="right-side">
+    <div class="nav-link-wrapper"> <a href="{% url 'home' %}">Home</a> </div>
+    <div class="nav-link-wrapper"> <a href="{% url 'about' %}">About</a> </div>
+    <div class="nav-link-wrapper"> <a href="{% url 'contact' %}">Contact</a> </div>
+    <div class="nav-link-wrapper"> <a href="{% url 'menu' %}">Menu</a> </div>
+    <div class="nav-link-wrapper"> <a href="{% url 'home' %}">What's New</a> </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="left-side">
+    <h1>It's not just <span>Coffee</span> <br>
+      It's <span class="green"> Starling </span>
+    </h1>
+    <p><span class="span1"><b>Starling</b></span> adalah kopi Starbok keliling yang sangat mantap untuk dinikmati</p>
+    <a href="{% url 'about' %}">Buy now!</a>
+  </div>
+  <div class="right-side">
+    <img src="img/img1.png" alt="" class="starbucks">
+    <div class="box">
+      <a href="https://www.facebook.com"> <img class="facebook" src="{% static 'img/facebook.png' %}" alt="facebook"></a>
+      <a href="https://www.instagram.com"> <img src="{% static 'img/instagram.png' %}" alt="instagram"></a>
+      <a href="https://x.com"> <img src="{% static 'img/twitter.png' %}" alt="twitter"></a>
+    </div>
+  </div>
+</div>
+
+<div class="thumb">
+  <a href="about.html"><img src="{% static 'img/thumb1.png' %}" onclick="imgSlider('img/thumb1.png');"></a>
+  <a href="about.html"><img src="{% static 'img/thumb2.png' %}" onclick="imgSlider('img/thumb2.png');"></a>
+  <a href="about.html"><img src="{% static 'img/thumb3.png' %}" onclick="imgSlider('img/thumb3.png');"></a>
+</div>
+
+<div class="containers1">
+  <div class="overlays1"></div> <!-- Overlay putih -->
+</div>
+
+<script>
+  // JavaScript Anda
+  function imgSlider(anything) {
+    document.querySelector('#bottom').src = anything;
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami</title>
+</head>
+<style>
+    body{
+        background: linear-gradient(to left, #87da6e, #fff);
+    }
+    .starling h1{
+        text-decoration: none;
+        color: green;
+        text-align: center;
+        margin-left: 3rem;
+    }
+
+    .starling h1 p .span1 {
+        color : green
+    }
+
+    .overlays1 {
+        position: absolute;
+        top: -25rem;
+        left: 6rem; 
+        width: 500px;
+        height: 380px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: -1;
+        left: 6.5rem;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        outline: 2px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .containers1 {
+        position: relative; 
+        width: 100%;
+        height: 400px; 
+        background-image: url('gambar-latar-belakang.jpg'); 
+        background-size: cover; 
+        color: white; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<body>
+    <div class="Starling">
+        <h1>Starling</h1>
+            <p><span class="span1"><b>Starling</b></span> Bukanlah sekedar kopi biasa,<br> namun <span class="span2"><b>Starling</b></span>
+                Telah dibuat oleh kopi dengan bahan yang berkualitas, tidak hanya itu.<br> harga dari 
+                <span class="span3"><b>Starling</b></span>
+                Sangat Terjangkau dan ramah dompet</p>
+    </div> 
+    <div class="containers1">
+        <div class="overlays1"></div> <!-- Overlay putih -->
+      </div>
+</body>
+</html>
